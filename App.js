@@ -22,7 +22,6 @@ const placeMines = (board, initialRow, initialCol) => {
   while (minesPlaced < MINES_COUNT) {
     const r = Math.floor(Math.random() * SIZE);
     const c = Math.floor(Math.random() * SIZE);
-    // Avoid placing mine on the first clicked cell and duplicates
     if (
       (r === initialRow && c === initialCol) ||
       board[r][c].isMine
