@@ -79,7 +79,6 @@ export default function Minesweeper() {
 
     if (firstClick) {
       placeMines(newBoard, r, c);
-      // Calculate adjacent mines after placing mines
       for (let row = 0; row < SIZE; row++) {
         for (let col = 0; col < SIZE; col++) {
           newBoard[row][col].adjacentMines = countAdjacentMines(
@@ -107,7 +106,6 @@ export default function Minesweeper() {
 
     setBoard(newBoard);
 
-    // Check win (all non-mine cells revealed)
     let safeCells = 0;
     newBoard.forEach((row) =>
       row.forEach((cell) => {
